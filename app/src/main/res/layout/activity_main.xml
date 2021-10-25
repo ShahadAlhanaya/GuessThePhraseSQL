@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivityLayout_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/prompt_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Blackcurrant_light"
+            android:padding="10dp"
+            android:text="Guess the full phrase"
+            android:textAlignment="center"
+            android:textColor="@color/Concrete_light" />
+
+        <TextView
+            android:id="@+id/phrase_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Blackcurrant_light"
+            android:padding="10dp"
+            android:text="Phrase"
+            android:textAlignment="center"
+            android:textColor="@color/Concrete_light" />
+
+        <TextView
+            android:id="@+id/bestScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Best Score: "
+            android:textAlignment="center"
+            android:textColor="@color/CeriseRed_dark" />
+
+        <TextView
+            android:id="@+id/guessedLetters_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Remaining attempts: "
+            android:textAlignment="center"
+            android:textColor="@color/CeriseRed_dark" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messages_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/guess_editText"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:background="@drawable/edittext_rounded"
+            android:hint="Guess the full phrase"
+            android:inputType="text"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/guess_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Guess"
+            android:textAllCaps="false"
+            app:cornerRadius="50dp" />
+
+        <Button
+            android:id="@+id/playAgain_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Play Again"
+            android:textAllCaps="false"
+            app:cornerRadius="50dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
